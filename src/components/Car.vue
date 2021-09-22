@@ -2,7 +2,12 @@
   <h2>Coche</h2>
   <p>Marca: {{ brand }}</p>
   <p>Modelo: {{ model }}</p>
-  <p>Color: {{ color[1] }}</p>
+  <!-- <p>Color: {{ color[1] }}</p> -->
+  <p>
+      Color: 
+      <span v-for="(color, index) in colors" :Key="index">
+          {{ index }}: {{ color }}-
+      </span>
   <p>Precio: {{ price }}</p>
   <p>Potencia: {{ power}}CV</p>
   {{ mensaje.title }} - {{ mensaje.text }}
