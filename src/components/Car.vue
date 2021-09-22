@@ -2,16 +2,27 @@
   <h2>Coche</h2>
   <p>Marca: {{ brand }}</p>
   <p>Modelo: {{ model }}</p>
-  <p>Potencias Urbanas menor a 300cv </p>
+  <p>Potencias Urbanas menor a 300cv</p>
   <ul>
-      <li v-for="(power, index) in powers" :key="index">
-          <span v-if="power < 300"> 
-              {{ power }} 
-              </span>
-      </li>
+    <!-- <li v-for="(power, index) in powers" :key="index">
+      <template v-if="power < 300">
+        {{ power }}
+      </template>
+    </li> -->
+    <template v-for="(power, index) in powers" :key="index">
+        <li v-if="power < 300">{{ power }}</li>
+    </template>
   </ul>
-  <!-- <p>Color: {{ color[1] }}</p> -->
-  <!-- <p>
+
+  <p>Potencias Urbanas mayor a 300cv</p>
+  <ul>
+    <template v-for="(power, index) in powers" :key="index">
+        <li v-if="power > 300">{{ power }}</li>
+    </template>
+  </ul>
+  </template>
+  <!-- <p>Color: {{ color[1] }}</p> 
+  <p>
       Color: 
       <span v-for="(color, index) in colors" :Key="index">
           {{ index }} : {{ color }} -
@@ -24,12 +35,12 @@
   </ul>
   <p>Precio: {{ price }}</p>
   <p>Potencia: {{ power}}CV</p>
-  {{ mensaje.title }} - {{ mensaje.text }} --> 
-</template>
+ {{ mensaje.title }} - {{ mensaje.text }} 
+</template>  -->
 
 <script>
 export default {
-    /*/*  data(){
+  /*/*  data(){
         return {
             brand: "Audi",
             model: "A4",
@@ -41,32 +52,28 @@ export default {
                 text: "Adios",
             }
         }; */
-    setup (){
-        const brand = "Audi";
-        const model = "A4";
-/*         const colors = ["Azul", "Morado", "Marrón", "Amarillo"];
+  setup() {
+    const brand = "Audi";
+    const model = "A4";
+    /*         const colors = ["Azul", "Morado", "Marrón", "Amarillo"];
         const price = 450000; */
-        const powers = [60, 80, 120, 160, 200, 280, 300, 390, 540,500];
-/*         const mensaje = {
+    const powers = [60, 80, 120, 160, 200, 280, 300, 390, 540, 500];
+    /*         const mensaje = {
             title: "Estoy bien",
             text: "Por fin con Vue", */
 
     return {
-        brand,
-        model,
-/*         colors,
+      brand,
+      model,
+      /*         colors,
         price, */
-        powers, 
-       /*  mensaje, */
+      powers,
+      /*  mensaje, */
     };
- },
+  },
 };
 
 /*Asi declaramos una varibale de opciones*/
-
 </script>
 
-<style>
-
-</style>
-
+<style></style>
