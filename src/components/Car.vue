@@ -5,9 +5,15 @@
   <!-- <p>Color: {{ color[1] }}</p> -->
   <p>
       Color: 
-      <span v-for="(color, index) in colors" :Key="index">
-          {{ index }}: {{ color }}-
-      </span>
+      <!-- <span v-for="(color, index) in colors" :Key="index">
+          {{ index }} : {{ color }} -
+      </span> -->
+  </p>
+  <ul>
+      <li v-for="(color, index) in colors" :Key="index">
+          {{ index }} : {{ color }}
+      </li>
+  </ul>
   <p>Precio: {{ price }}</p>
   <p>Potencia: {{ power}}CV</p>
   {{ mensaje.title }} - {{ mensaje.text }}
@@ -31,7 +37,7 @@ export default {
     setup (){
         const brand = "Audi";
         const model = "A4";
-        const color = ["Azul", "Morado", "Marrón"];
+        const colors = ["Azul", "Morado", "Marrón", "Amarillo"];
         const price = 450000;
         const power = 240;
         const mensaje = {
@@ -42,7 +48,7 @@ export default {
     return {
         brand,
         model,
-        color,
+        colors,
         price,
         power, 
         mensaje,
