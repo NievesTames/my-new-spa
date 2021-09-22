@@ -2,13 +2,21 @@
   <h2>Coche</h2>
   <p>Marca: {{ brand }}</p>
   <p>Modelo: {{ model }}</p>
+  <p>Potencias Urbanas menor a 300cv </p>
+  <ul>
+      <li v-for="(power, index) in powers" :key="index">
+          <span v-if="power < 300"> 
+              {{ power }} 
+              </span>
+      </li>
+  </ul>
   <!-- <p>Color: {{ color[1] }}</p> -->
-  <p>
+  <!-- <p>
       Color: 
-      <!-- <span v-for="(color, index) in colors" :Key="index">
+      <span v-for="(color, index) in colors" :Key="index">
           {{ index }} : {{ color }} -
       </span> -->
-  </p>
+  <!-- </p>
   <ul>
       <li v-for="(color, index) in colors" :Key="index">
           {{ index }} : {{ color }}
@@ -16,12 +24,12 @@
   </ul>
   <p>Precio: {{ price }}</p>
   <p>Potencia: {{ power}}CV</p>
-  {{ mensaje.title }} - {{ mensaje.text }}
+  {{ mensaje.title }} - {{ mensaje.text }} --> 
 </template>
 
 <script>
 export default {
-    /* data(){
+    /*/*  data(){
         return {
             brand: "Audi",
             model: "A4",
@@ -32,26 +40,24 @@ export default {
                 title: "Hola mundo",
                 text: "Adios",
             }
-        };
-    }, */
+        }; */
     setup (){
         const brand = "Audi";
         const model = "A4";
-        const colors = ["Azul", "Morado", "Marrón", "Amarillo"];
-        const price = 450000;
-        const power = 240;
-        const mensaje = {
+/*         const colors = ["Azul", "Morado", "Marrón", "Amarillo"];
+        const price = 450000; */
+        const powers = [60, 80, 120, 160, 200, 280, 300, 390, 540,500];
+/*         const mensaje = {
             title: "Estoy bien",
-            text: "Por fin con Vue",
-        };
+            text: "Por fin con Vue", */
 
     return {
         brand,
         model,
-        colors,
-        price,
-        power, 
-        mensaje,
+/*         colors,
+        price, */
+        powers, 
+       /*  mensaje, */
     };
  },
 };
