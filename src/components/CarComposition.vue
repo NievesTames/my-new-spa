@@ -1,5 +1,5 @@
 <template>
-  <h2>Coche</h2>
+  <h2>Coche Compositions Api</h2>
   <p>Marca: {{ brand }}</p>
   <p>Modelo: {{ model }}</p>
   <p>Potencias Urbanas menor a 300cv</p>
