@@ -1,18 +1,21 @@
 <template>
   <h1>Nuestro primer componente</h1>
-  <CarComposition/>
-  <CarOptions/>
+  <Car power="power"/>
 </template>
 
 <script>
-import CarComposition from "./components/CarComposition.vue";
-import CarOptions from "./components/CarOptions.vue";
+/* import CarComposition from "./components/CarComposition.vue";
+import CarOptions from "./components/CarOptions.vue"; */
+import Car from "./components/Car.vue";
 
 export default {
   components: {
-    CarComposition,
-    CarOptions,
+    Car,
   },
+  setup (){
+    let power
+
+  }
 };
 </script>
 
