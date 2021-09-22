@@ -6,10 +6,10 @@
 
   <button @click="upPower">Aumentar></button>
   <button @click="downPower">Disminuir</button>
-  </template>
+</template>
 
 <script>
- export default {
+export default {
   data() {
     return {
       brand: "Seat",
@@ -25,10 +25,7 @@
       console.log("Bajando Potencia");
     },
   },
-
 };
 </script>
 
-<style>
-
-</style>
+<style></style>
