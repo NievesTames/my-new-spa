@@ -4,7 +4,7 @@
   <p>Modelo: {{ model }}</p>
   <p>Potencia: {{ power }}</p>
 
-  <button @click="upPower">Aumentar></button>
+  <button @click="upPower">Aumentar</button>
   <button @click="downPower">Disminuir</button>
 </template>
 
