@@ -1,9 +1,10 @@
 <template>
-  <h2>Coche Compositions Api</h2>
-  <p>Marca: {{ brand }}</p>
-  <p>Modelo: {{ model }}</p>
-  <p>Potencia:</p>
-  
+  <div class="content">
+    <h2 class="title">Coche Compositions Api</h2>
+    <p>Marca: {{ brand }}</p>
+    <p>Modelo: {{ model }}</p>
+    <p>Potencia:</p>
+  </div>
 </template>
 
 <script>
@@ -12,12 +13,12 @@ export default {
     power: {
       type: Number,
       default: 60,
-   },
+    },
   },
   setup(props) {
     const brand = "Audi";
     const model = "A4";
-   /*  const power = "40";
+    /*  const power = "40";
     
     const upPower = () => {
       console.log("Aumentar potencia...");
@@ -30,7 +31,7 @@ export default {
     return {
       brand,
       model,
-     /*  power,
+      /*  power,
       upPower,
       downPower, */
     };
@@ -40,4 +41,12 @@ export default {
 /*Asi declaramos una varibale de opciones*/
 </script>
 
-<style></style>
+<style lang="sass">
+.content {
+  background: green;
+
+  .title {
+    color: red;
+  }
+}
+</style>
