@@ -2,7 +2,7 @@
   <h2>Coche Compositions Api</h2>
   <p>Marca: {{ brand }}</p>
   <p>Modelo: {{ model }}</p>
-  <p>Potencia: {{ power }}</p>
+  <p>Potencia:</p>
   
   
 </template>
@@ -13,8 +13,9 @@ export default {
     power: {
       type: Number,
       default: 60,
+   },
   },
-  setup() {
+  setup(props) {
     const brand = "Audi";
     const model = "A4";
    /*  const power = "40";
@@ -30,9 +31,9 @@ export default {
     return {
       brand,
       model,
-      power,
+     /*  power,
       upPower,
-      downPower,
+      downPower, */
     };
   },
 };
