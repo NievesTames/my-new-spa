@@ -9,10 +9,15 @@
 
 <script>
 export default {
+  props: {
+    power: {
+      type: Number,
+      default: 60,
+  },
   setup() {
     const brand = "Audi";
     const model = "A4";
-    const power = "40";
+   /*  const power = "40";
     
     const upPower = () => {
       console.log("Aumentar potencia...");
@@ -20,7 +25,7 @@ export default {
 
     const downPower = (newPower) => {
       console.log("Disminuir potencia..." + newPower);
-    }
+    } */
 
     return {
       brand,

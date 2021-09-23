@@ -1,6 +1,6 @@
 <template>
   <h1>Nuestro primer componente</h1>
-  <Car power="power"/>
+  <Car :power="power"/>
 </template>
 
 <script>
@@ -13,9 +13,13 @@ export default {
     Car,
   },
   setup (){
-    let power
+    let power = 30;
 
-  }
+    return {
+      power,
+    };
+
+  },
 };
 </script>
 
