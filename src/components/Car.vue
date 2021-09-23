@@ -4,7 +4,6 @@
   <p>Modelo: {{ model }}</p>
   <p>Potencia:</p>
   
-  
 </template>
 
 <script>
